@@ -28,7 +28,7 @@ const FeaturedCourses = () => {
             className="max-w-md bg-white p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl"
           >
             <img
-              className="object-cover h-48 mb-4 rounded-md shadow-md"
+              className="object-cover gh-48 mb-4 rounded-md shadow-md"
               src={course.image}
               alt={course.title}
             />
