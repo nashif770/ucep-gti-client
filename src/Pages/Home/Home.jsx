@@ -4,6 +4,9 @@ import CourseOverview from "./CourseOverview/CourseOverview";
 import FeaturedCourses from "./FeaturedCourses/FeaturedCourses";
 import Testimonial from "./Testimonial/Testimonial";
 import Trainers from "./Trainers/Trainers";
+import Events from "./Events/Events";
+import StudentProjects from "./StudentProjects/StudentProjects";
+import Faq from "./FAQ/Faq";
 
 const Home = () => {
   return (
@@ -13,6 +16,9 @@ const Home = () => {
       <FeaturedCourses></FeaturedCourses>
       <Testimonial></Testimonial>
       <Trainers></Trainers>
+      <Events></Events>
+      <StudentProjects></StudentProjects>
+      <Faq></Faq>
     </div>
   );
 };
