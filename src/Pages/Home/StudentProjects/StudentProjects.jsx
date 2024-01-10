@@ -1,4 +1,5 @@
 import React from "react";
+import Heading from "../../../0.components/Heading";
 
 const studentProjects = [
   {
@@ -18,26 +19,42 @@ const studentProjects = [
 
 const StudentProjects = () => {
   return (
-    <div className="bg-gray-100 py-12">
-      <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-extrabold text-gray-800 mb-10">
-          Student Projects
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="bg-gradient-to-b from-goldish to-greenish py-16">
+      <div class="container mx-auto text-center">
+        <Heading heading={"Discover Outstanding Student Projects"}></Heading>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {studentProjects.map((project, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
+              class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
             >
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-48 mb-4 rounded-md object-cover"
+                class="w-full h-64 mb-6 rounded-md object-cover"
               />
-              <h3 className="text-xl font-semibold mb-2 text-purple-500">
+              <h3 class="text-2xl font-semibold mb-2 text-goldish">
                 {project.title}
               </h3>
-              <p className="text-gray-700 mb-4">{project.description}</p>
+              <p class="text-gray-700 mb-4">{project.description}</p>
+              <div class="flex justify-between items-center">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-greenish hover:underline"
+                >
+                  Learn More
+                </a>
+                <div class="flex items-center space-x-2">
+                  <span class="text-goldish font-bold text-lg">
+                    {project.likes} Likes
+                  </span>
+                  <button class="bg-goldish hover:bg-orangeish text-white font-bold py-1 px-3 rounded-full transition duration-300 ease-in-out">
+                    Like
+                  </button>
+                </div>
+              </div>
             </div>
           ))}
         </div>

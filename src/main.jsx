@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
       <QueryClientProvider client={queryClient}>
-        <div className="max-w-[1980px] mx-auto">
+        <div className="max-w-[1980px] mx-auto bg-[#f5f5f5] text-[#3e574d]">
           <RouterProvider router={router} />
         </div>
       </QueryClientProvider>

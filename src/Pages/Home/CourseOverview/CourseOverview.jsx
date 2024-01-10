@@ -1,4 +1,5 @@
 import React from "react";
+import Heading from "../../../0.components/Heading";
 
 const courses = [
   {
@@ -36,24 +37,30 @@ const courses = [
 const CourseOverview = () => {
   return (
     <div>
-      <h2 className="text-3xl font-semibold mb-4 text-center">
-        Our Courses
-      </h2>
+      <Heading heading={"Explore Our Course"}></Heading>
       <div className="flex flex-wrap justify-center">
         {courses.map((course, index) => (
           <div
             key={index}
-            className="max-w-md m-4 bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+            className="max-w-md m-4 bg-white p-6 rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-xl"
           >
             <img
-              className="object-cover h-32 mb-4 rounded-md shadow-md"
+              className="object-cover h-40 mb-6 rounded-md shadow-md"
               src={`${course.image}`}
               alt={course.title}
             />
-            <h2 className="text-2xl font-semibold mb-2 text-blue-500">
+            <h2 className="text-2xl font-semibold mb-2 text-indigo-500">
               {course.title}
             </h2>
             <p className="text-gray-700">{course.description}</p>
+            <div className="mt-4 flex justify-between items-center">
+              <span className="text-[#cca44c] font-bold text-lg">
+                ${course.price}
+              </span>
+              <button className="hover:bg-white hover:text-[#f46c24] bg-[#f46c24] text-white font-bold py-2 px-4 rounded-full">
+                Enroll Now
+              </button>
+            </div>
           </div>
         ))}
       </div>

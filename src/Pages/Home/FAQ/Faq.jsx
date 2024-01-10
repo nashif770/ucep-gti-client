@@ -1,4 +1,5 @@
 import React from "react";
+import Heading from "../../../0.components/Heading";
 
 const Faq = () => {
   const faqs = [
@@ -26,21 +27,24 @@ const Faq = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-purple-500 to-indigo-700 py-12">
+    <div className="bg-gradient-to-b from-goldish to-greenish py-8">
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-extrabold text-white mb-10">
-          Frequently Asked Questions
-        </h2>
+        <Heading heading={"Explore Frequently Asked Questions"}></Heading>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
+              className="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
             >
-              <h3 className="text-xl font-semibold mb-2 text-purple-500">
+              <h3 className="text-2xl font-semibold mb-4 text-goldish h-20">
                 {faq.question}
               </h3>
-              <p className="text-gray-700">{faq.answer}</p>
+              <p className="text-gray-700 h-32 ">{faq.answer}</p>
+              <div className="mt-6 h-20 ">
+                <button className="hover:bg-white border shadow-lg hover:text-[#f46c24] bg-[#f46c24] text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out">
+                  Learn More
+                </button>
+              </div>
             </div>
           ))}
         </div>
